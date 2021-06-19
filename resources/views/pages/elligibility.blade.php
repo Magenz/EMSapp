@@ -1,0 +1,5 @@
+@yield('layouts.app')
+
+@section('content')
+    <h1>Elligibility Page</h1>
+@endsection
