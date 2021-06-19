@@ -1,4 +1,4 @@
-@extends('name')('layouts/app')
+@extends('layouts/app')
 
 @section('content')
     <h1>children Page</h1>
