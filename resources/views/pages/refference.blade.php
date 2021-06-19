@@ -1,4 +1,4 @@
-@yield('layouts.app')
+@extends('layouts.app')
 
 @section('content')
     <h1>Refference Page</h1>

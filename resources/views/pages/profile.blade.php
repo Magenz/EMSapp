@@ -1,5 +1,8 @@
-@yield('layouts.app')
+@extends('layouts/app')
+
 
 @section('content')
-    <h1>profile page</h1>
+<h1>Welcome to EMS app</h1>
+<p>profile</p>  
 @endsection
+
