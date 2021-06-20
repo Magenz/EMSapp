@@ -22,7 +22,7 @@ Route::get('/', [PagesController::class, 'index']);
 Route::get('/children', [PagesController::class, 'children']);
 Route::get('/education', [PagesController::class, 'education']);
 Route::get('/elligibility', [PagesController::class, 'elligibility']);
-Route::get('/learning_and_develpment', [PagesController::class, 'learning_and_develpment']);
+Route::get('/learning_and_development', [PagesController::class, 'learning_and_development']);
 Route::get('/personal_information', [PagesController::class, 'personal_information']);
 Route::get('/profile', [PagesController::class, 'profile']);
 Route::get('/refference', [PagesController::class, 'refference']);
