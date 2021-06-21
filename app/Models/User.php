@@ -40,4 +40,16 @@ class User extends Authenticatable
     protected $casts = [
         'email_verified_at' => 'datetime',
     ];
+
+    public function hobbies()
+    {
+        return $this->hasMany(hobby::class);
+    }
+
+    public function getPersonalInformation()
+    {
+        return $this->hasOne('App\Models\personal_information');
+    }
+
+
 }

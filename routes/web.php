@@ -36,3 +36,4 @@ Route::resource('workexperience', '\App\Http\Controllers\WorkexperienceControlle
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+Route::resource('hobby', '\App\Http\Controllers\hobbyController');
