@@ -18,6 +18,7 @@ use App\Http\Controllers\PagesController;
 //     return view('welcome');
 // });
 
+//pages route--------------------------------------------------------------------------------------------
 Route::get('/', [PagesController::class, 'index']);
 Route::get('/children', [PagesController::class, 'children']);
 Route::get('/education', [PagesController::class, 'education']);
@@ -28,3 +29,10 @@ Route::get('/profile', [PagesController::class, 'profile']);
 Route::get('/refference', [PagesController::class, 'refference']);
 Route::get('/voluntary_work', [PagesController::class, 'voluntary_work']);
 Route::get('/work_experience', [PagesController::class, 'work_experience']);
+//--------------------------------------------------------------------------------------------------------
+//routing resources
+Route::resource('workexperience', '\App\Http\Controllers\WorkexperienceController');
+
+Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
