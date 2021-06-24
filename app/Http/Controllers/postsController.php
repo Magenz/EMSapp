@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 //this Post is the Post model
 use App\Models\Post;
+use Illuminate\Support\Facades\Auth;
 
 class postsController extends Controller
 {
@@ -33,6 +34,9 @@ class postsController extends Controller
         $post = new Post;
         $post->title = $request->input('title');
         $post->body = $request->input('body');
+        //grabs the id from user table and put it to post user_id column
+        $user = Auth::user();
+        $post->user_id = $user->id;
         $post->save();
 
         return redirect('post')->with('success', 'post created');
@@ -74,4 +78,4 @@ class postsController extends Controller
         $a->delete();
         return redirect('/post')->with('success', 'post removed');
     }
-}
+}  

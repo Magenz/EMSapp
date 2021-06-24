@@ -37,4 +37,5 @@ class PagesController extends Controller
     public function work_experience(){
         return view('pages/work_experience');
     }
+  
 }

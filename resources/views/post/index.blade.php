@@ -21,7 +21,7 @@ This is just my theory.
     @foreach ($posts as $post)
        <div class="card p-2">
             <a href="/post/{{$post->id}}"><h3>{{$post->title}}</h3></a>
-            <small>written on: {{$post->created_at}}</small><hr>
+            <small>written on: {{$post->created_at}} by: {{$post->user->name}}</small><hr>
             <div class="d-flex flex-row">
                 <div class="p-2">
                     {{-- edit --}}

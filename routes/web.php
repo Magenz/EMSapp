@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\PagesController;
+use Illuminate\Support\Facades\Auth;
 
 /*
 |--------------------------------------------------------------------------
@@ -29,6 +30,7 @@ Route::get('/profile', [PagesController::class, 'profile']);
 Route::get('/refference', [PagesController::class, 'refference']);
 Route::get('/voluntary_work', [PagesController::class, 'voluntary_work']);
 Route::get('/work_experience', [PagesController::class, 'work_experience']);
+
 //--------------------------------------------------------------------------------------------------------
 //routing resources
 Route::resource('workexperience', '\App\Http\Controllers\WorkexperienceController');

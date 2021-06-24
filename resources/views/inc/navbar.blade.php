@@ -33,6 +33,9 @@
           <li class="nav-item">
             <a class="nav-link" href="/voluntary_work">Voluntary Work</a>
           </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/post">News</a>
+          </li>
         </ul>
          <!-- Right Side Of Navbar -->
               <ul class="navbar-nav ml-auto">

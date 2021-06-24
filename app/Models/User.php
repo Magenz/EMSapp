@@ -24,12 +24,16 @@ class User extends Authenticatable
         'email_verified_at' => 'datetime',
     ];
     
-    public function hobbies()
+    public function hobby()
     {
         return $this->hasMany(hobby::class);
+    }
+    public function post(){
+        return $this->hasMany('App\Models\Post');
     }
     public function getPersonalInformation()
     {
         return $this->hasOne('App\Models\personal_information');
     }
+    
 }       
