@@ -1,6 +1,6 @@
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark mb-3">
     <div class="container-fluid">
-      <a class="navbar-brand" href="/home">EMS APP</a>
+      <a class="navbar-brand" href="/">EMS APP</a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
@@ -12,27 +12,11 @@
           <li class="nav-item">
             <a class="nav-link" href="/personal_information">Personal Information</a>
           </li>
+
           <li class="nav-item">
-            <a class="nav-link" href="/children">Children</a>
+            <a class="nav-link" href="/workexp">Work Experience</a>
           </li>
-          <li class="nav-item">
-            <a class="nav-link" href="/education">Education</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="/elligibility">Elligibility</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="/learning_and_development">Learning and Development</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="/refference">Refference</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="/work_experience">Work Experience</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="/voluntary_work">Voluntary Work</a>
-          </li>
+          
           <li class="nav-item">
             <a class="nav-link" href="/post">News</a>
           </li>
@@ -61,8 +45,8 @@
                         <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
                             <a class="dropdown-item" href="{{ route('logout') }}"
                               onclick="event.preventDefault();
-                                            document.getElementById('logout-form').submit();">
-                                {{ __('Logout') }}
+                              document.getElementById('logout-form').submit();">
+                              {{ __('Logout') }}
                             </a>
 
                             <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">

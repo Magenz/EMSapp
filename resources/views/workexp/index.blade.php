@@ -2,6 +2,7 @@
 
 @section('content')
 <div class="container">
+    @include('inc/messages')
     <div class="row justify-content-center">
         <div class="col-md-12">
             <div class="card">
@@ -13,6 +14,7 @@
                         <button class="btn btn-primary mb-2"> Add Work Experience</button>
                     </a> 
                     <table class="table table-striped">
+                        <thead class="thead-light">
                         <tr>
                             <th>From</th>
                             <th>To</th>
@@ -22,8 +24,10 @@
                             <th>Salary Grade</th>
                             <th>Appointment Status</th>
                             <th>Government Service</th>
+                            <th></th>
+                            <th></th>
                         </tr>
-                        
+                        </thead>
                        @if (count($workexperience)>0)
                        <h3>Your workexperience</h3>
                             @foreach ($workexperience as $p)
@@ -39,7 +43,7 @@
                                 
                                 <td><a href="/workexp/{{$p->id}}/edit">Edit</a></td>
                                 <td>
-                                    <form action="{{ route('workexp.destroy', $p->id) }}" method="workexp">
+                                    <form action="{{ route('workexp.destroy', $p->id) }}" method="POST">
                                         @csrf
                                         @method('DELETE')
                                         <button type="submit" title="delete" class="btn btn-danger pull-right">

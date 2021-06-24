@@ -59,17 +59,33 @@ class WorkexperiencesController extends Controller
 
     public function edit($id)
     {
-        //
+        $a = Workexperience::find($id);
+        return view('workexp/edit')->with('workexp', $a);
     }
 
     
     public function update(Request $request, $id)
     {
-        //
+        //validation
+        $this->validate($request, 
+        [
+            'dateFrom' => 'required',
+            'dateTo' => 'required'
+        ]
+        );
+        //Find work to edit
+        $a = Workexperience::find($id);
+        $a->title = $request->input('title');
+        $a->body = $request->input('body');
+        $a->save();
+
+        return redirect('workexp')->with('success', 'Work Experience updated');
     }
 
     public function destroy($id)
     {
-        //
+        $a = Workexperience::find($id);
+        $a->delete();
+        return redirect('/workexp')->with('success', 'Work Experience removed');
     }
 }
