@@ -1,0 +1,55 @@
+{{--
+quick note:
+$posts variable is comming from Post model
+it grabs in plural form which turns into $posts
+
+im not sure though hahahahahah
+i havn't tested it yet.
+This is just my theory.
+    --}}
+
+@extends('layouts/app')
+@section('content')
+@include('inc/messages')
+<h2>posts</h2>
+<a href="/post/create">
+    <button type="submit" class="btn btn-secondary mb-2">
+    Create New Post
+    </button>
+</a>
+@if (count($posts)>0)
+    @foreach ($posts as $post)
+       <div class="card p-2">
+            <a href="/post/{{$post->id}}"><h3>{{$post->title}}</h3></a>
+            <small>written on: {{$post->created_at}}</small><hr>
+            <div class="d-flex flex-row">
+                <div class="p-2">
+                    {{-- edit --}}
+                    <a href="/post/{{$post->id}}/edit">
+                        <button class ="btn btn-primary">Edit </button>
+                    </a>
+                </div>
+                <div class="p-2">
+                    {{-- delete --}}
+                    <form action="{{ route('post.destroy', $post->id) }}" method="POST">
+                        @csrf
+                        @method('DELETE')
+                        <button type="submit" title="delete" class="btn btn-danger pull-right">
+                        Delete
+                        </button>
+                    </form>    
+                </div>
+    
+              </div>
+            
+       
+        </div> 
+    @endforeach
+    {{$posts->links()}}
+@else
+    <p>No post Found</p>
+@endif
+
+
+    
+@endsection
