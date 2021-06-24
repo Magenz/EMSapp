@@ -8,8 +8,6 @@ use Illuminate\Database\Eloquent\Model;
 class Post extends Model
 {
     use HasFactory;
-
-
     //table name
     protected $table = 'posts';
     //Primary key

@@ -23,17 +23,14 @@ class User extends Authenticatable
     protected $casts = [
         'email_verified_at' => 'datetime',
     ];
-    
-    public function hobby()
-    {
-        return $this->hasMany(hobby::class);
-    }
+    //post model relationship
     public function post(){
         return $this->hasMany('App\Models\Post');
     }
-    public function getPersonalInformation()
-    {
-        return $this->hasOne('App\Models\personal_information');
+    //work experience model relationship
+    public function workexperience(){
+        return $this->hasMany('App\Models\Workexperience');
     }
+   
     
 }       

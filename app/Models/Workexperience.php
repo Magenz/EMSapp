@@ -9,8 +9,14 @@ class Workexperience extends Model
 {
     use HasFactory;
 
-    //here we can add fcking relationships
-    //set rules?
-    //like primary key
-    //i haven't read all the documentation
+    //table name
+    protected $table = 'workexperience';
+    //Primary key
+    public $primaryKey = 'id';
+    //timestamps
+    public $timestamps = true;
+
+    public function user(){
+        return $this->belongsTo('App\Models\User');
+    }
 }

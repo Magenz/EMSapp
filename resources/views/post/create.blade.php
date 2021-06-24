@@ -19,7 +19,7 @@
 
     <div class="w-2/3 mx-auto">
         <div class="bg-white shadow-md rounded my-6">
-                <form action="{{route('post.store')}}" method="POST" >
+                <form action="{{route('post.store')}}" method="POST" enctype="multipart/form-data">
                     @csrf  
                     <div class="row">
                         <div class="col-xs-12 col-sm-12 col-md-12 px-7 pt-2">
@@ -36,7 +36,12 @@
                                     placeholder="Body"></textarea>
                             </div>
                         </div>
-                    
+                        <div class="col-xs-12 col-sm-12 col-md-12 px-7">
+                            <div class="form-group">
+                               {{Form::file('cover_image')}}
+                            </div>
+                        </div>
+                     
                     
                         <div class="col-xs-12 col-sm-12 col-md-12 text-center pb-7">
                             <button type="submit" class="btn btn-primary">Submit</button>

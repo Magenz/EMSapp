@@ -33,8 +33,9 @@ Route::get('/work_experience', [PagesController::class, 'work_experience']);
 
 //--------------------------------------------------------------------------------------------------------
 //routing resources
-Route::resource('workexperience', '\App\Http\Controllers\WorkexperienceController');
+
 Route::resource('post', '\App\Http\Controllers\postsController');
-Route::resource('hobby', '\App\Http\Controllers\hobbyController');
+Route::resource('workexp', '\App\Http\Controllers\WorkexperiencesController');
+
 Auth::routes();
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');

@@ -22,7 +22,7 @@ class CreateWorkexperienceTable extends Migration
             $table->decimal('monthlySalary');
             $table->string('salaryGrade');
             $table->string('appointmentStatus');
-            $table->boolean('govService');
+            $table->string('govService');
             $table->timestamps();
         });
     }
