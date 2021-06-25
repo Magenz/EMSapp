@@ -28,9 +28,9 @@
                             <th></th>
                         </tr>
                         </thead>
-                       @if(count($geninfo)>0)
-                       <h3>Your geninfo</h3>
-                            @foreach ($geninfo as $p)
+                       @if (count($workexperience)>0)
+                       <h3>Your workexperience</h3>
+                            @foreach ($workexperience as $p)
                             <tr>
                                 <td>{{$p->dateFrom}}</td>
                                 <td>{{$p->dateTo}}</td>

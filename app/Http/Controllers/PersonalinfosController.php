@@ -18,8 +18,10 @@ class PersonalinfosController extends Controller
     {
         $a = Auth::user();
         $user = User::find($a->id);
-        return view('geninfo.index')->with('personal_information', $user->personal_information);
+        
+        return view('geninfo.index')->with('personal_information', $user->Personalinfo);
     }
+
     // points to create view
     public function create()
     {
@@ -34,6 +36,7 @@ $this->validate($request,
 [
     'surname' => 'required',
     'first_name' => 'required'
+    
 ]
 );
 //add new work experience

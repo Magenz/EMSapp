@@ -16,7 +16,7 @@ class WorkexperiencesController extends Controller
     {
     $a = Auth::user();
     $user = User::find($a->id);
-    return view('workexp.index')->with('workexperience', $user->workexperience);
+    return view('workexp.index')->with('workexperience', $user->Workexperience);
     }
     // points to create view
     public function create()
