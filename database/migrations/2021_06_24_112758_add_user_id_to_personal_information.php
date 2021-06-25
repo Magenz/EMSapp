@@ -14,7 +14,9 @@ class AddUserIdToPersonalInformation extends Migration
     public function up()
     {
         Schema::table('personal_information', function (Blueprint $table) {
-            $table->integer('user_id');
+            $table->unsignedBigInteger('user_id');
+            $table->foreign('user_id')->references('id')->on('users')
+            ->onDelete('cascade');
         });
     }
 

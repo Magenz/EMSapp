@@ -31,6 +31,11 @@ class User extends Authenticatable
     public function workexperience(){
         return $this->hasMany('App\Models\Workexperience');
     }
+     //personal information model relationship
+     public function personalinfo(){
+        return $this->hasOne('App\Models\Personalinfo');
+    }
+   
    
     
 }       

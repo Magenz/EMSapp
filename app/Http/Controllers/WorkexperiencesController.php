@@ -75,8 +75,14 @@ class WorkexperiencesController extends Controller
         );
         //Find work to edit
         $a = Workexperience::find($id);
-        $a->title = $request->input('title');
-        $a->body = $request->input('body');
+        $a->dateFrom = $request->input('dateFrom');
+        $a->dateTo = $request->input('dateTo');
+        $a->positionTitle = $request->input('positionTitle');
+        $a->department = $request->input('department');
+        $a->monthlySalary = $request->input('monthlySalary');
+        $a->salaryGrade = $request->input('salaryGrade');
+        $a->appointmentStatus = $request->input('appointmentStatus');
+        $a->govService = $request->input('govService');
         $a->save();
 
         return redirect('workexp')->with('success', 'Work Experience updated');
