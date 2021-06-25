@@ -14,7 +14,7 @@
                 Edit Experience
             </div>
             <div class="">
-                <a class="btn btn-primary" href="{{ route('workexp.index') }}" title="Go back"> <i class="fas fa-backward "><< Back</i> </a>
+                <a class="btn btn-primary" href="{{ route('geninfo.index') }}" title="Go back"> <i class="fas fa-backward "><< Back</i> </a>
             </div>
         </div>
     </div>
@@ -25,57 +25,57 @@
 
     <div class="w-2/3 mx-auto">
         <div class="bg-white shadow-md rounded my-6">
-                <form action="{{route('workexp.update', $workexp->id)}}" method="POST">
+                <form action="{{route('geninfo.update', $geninfo->id)}}" method="POST">
                     @csrf 
                     @method('PUT') 
                     <div class="row">
                        {{-- textfields --}}
                         <div class="col-xs-12 col-sm-12 col-md-12 px-7 pt-2">
                             <div class="form-group">
-                                <strong>From</strong>
-                                <input type="text" name="dateFrom" value="{{$workexp->dateFrom}}" class="form-control">
+                                <strong>Surname</strong>
+                                <input type="text" name="surname" value="{{$geninfo->surname}}" class="form-control">
                             </div>
                         </div>
                         <div class="col-xs-12 col-sm-12 col-md-12 px-7 pt-2">
                             <div class="form-group">
-                                <strong>To</strong>
-                                <input type="text" name="dateTo" value="{{$workexp->dateTo}}" class="form-control">
+                                <strong>First Name</strong>
+                                <input type="text" name="first_name" value="{{$geninfo->first_name}}" class="form-control">
                             </div>
                         </div>
                         <div class="col-xs-12 col-sm-12 col-md-12 px-7 pt-2">
                             <div class="form-group">
-                                <strong>Position / Title</strong>
-                                <input type="text" name="positionTitle" value="{{$workexp->positionTitle}}" class="form-control">
+                                <strong>Middle Name</strong>
+                                <input type="text" name="middle_name" value="{{$geninfo->middle_name}}" class="form-control">
                             </div>
                         </div>
                         <div class="col-xs-12 col-sm-12 col-md-12 px-7 pt-2">
                             <div class="form-group">
-                                <strong>Department</strong>
-                                <input type="text" name="department" value="{{$workexp->department}}" class="form-control">
+                                <strong>Name Extention</strong>
+                                <input type="text" name="name_extention" value="{{$geninfo->name_extention}}" class="form-control">
                             </div>
                         </div>
                         <div class="col-xs-12 col-sm-12 col-md-12 px-7 pt-2">
                             <div class="form-group">
-                                <strong>Salary</strong>
-                                <input type="text" name="monthlySalary" value="{{$workexp->monthlySalary}}" class="form-control">
+                                <strong>Citizenship</strong>
+                                <input type="text" name="citizenship" value="{{$geninfo->citizenship}}" class="form-control">
                             </div>
                         </div>
                         <div class="col-xs-12 col-sm-12 col-md-12 px-7 pt-2">
                             <div class="form-group">
-                                <strong>Salary Grade</strong>
-                                <input type="text" name="salaryGrade" value="{{$workexp->salaryGrade}}" class="form-control">
+                                <strong>Civil Status</strong>
+                                <input type="text" name="salaryGrade" value="{{$geninfo->civil_status}}" class="form-control">
                             </div>
                         </div>
                         <div class="col-xs-12 col-sm-12 col-md-12 px-7 pt-2">
                             <div class="form-group">
-                                <strong>Appointment Status</strong>
-                                <input type="text" name="appointmentStatus" value="{{$workexp->appointmentStatus}}" class="form-control">
+                                <strong>Gender</strong>
+                                <input type="text" name="appointmentStatus" value="{{$geninfo->gender}}" class="form-control">
                             </div>
                         </div>
                         <div class="col-xs-12 col-sm-12 col-md-12 px-7 pt-2">
                             <div class="form-group">
-                                <strong>Government Service (Yes or No)</strong>
-                                <input type="text" name="govService" value="{{$workexp->govService}}" class="form-control">
+                                <strong>Birth Date</strong>
+                                <input type="text" name="govService" value="{{$geninfo->birth_date}}" class="form-control">
                             </div>
                         </div>
 

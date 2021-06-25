@@ -41,6 +41,7 @@
                                 <td>{{$p->appointmentStatus}}</td>
                                 <td>{{$p->govService}}</td>
                                 
+                                {{-- Start of two buttons --}}
                                 <td><a href="/workexp/{{$p->id}}/edit"><button class="btn btn-secondary">Edit</button> </a></td>
                                 <td>
                                     <form action="{{ route('workexp.destroy', $p->id) }}" method="POST">
@@ -51,6 +52,7 @@
                                         </button>
                                     </form>    
                                 </td>
+                                {{-- end of two buttons --}}
                             </tr>   
                             @endforeach
                         

@@ -3,23 +3,24 @@
 @section('content')
 <div class="container">
     @include('inc/messages')
-    <div class="row justify-content-center">
-        <div class="col-md-12">
-            <div class="card">
-                <div class="card-header">{{ __('General Information') }}</div>
-
-                <div class="card-body">
-                   @if (is_null($personal_information))
-               {{-- create will show --}}
-               @include('geninfo.create')
-                   @else
-               {{-- profile will show --}}
-               {{$personal_information}}
-                   @endif
-                    </table>
+        @if (is_null($pinfo))
+        {{-- create will show --}}
+            @include('geninfo.create')
+        @else
+        {{-- profile will show --}}
+            <div>
+                <h4 class="text-primary">General Information</h4> 
                 </div>
+                <div><a href="/geninfo/{{$pinfo->id}}/edit">
+                <button class="btn btn-primary pull-right">Edit</button>
+                </a>
             </div>
-        </div>
+    <div class="d-flex flex-row flex-wrap justify-content-evenly">
+             @include('geninfo.show')
+        @endif
     </div>
 </div>
+
+
+    
 @endsection

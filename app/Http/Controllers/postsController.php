@@ -5,6 +5,7 @@ use Illuminate\Http\Request;
 //this Post is the Post model
 use App\Models\Post;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\DB;
 
 class postsController extends Controller
 {
@@ -72,13 +73,19 @@ class postsController extends Controller
 //show
     public function show($id)
     {
+
         $post = Post::find($id);
         return view('post/show')->with('posts', $post);
     }
 
     public function edit($id)
     {
-        $a = Post::find($id);
+       
+
+        $user = Auth::user();
+        //this one ensures that it only querries your own data
+        $a = DB::table('posts')->where('user_id', $user->id)->find($id);
+        //  $a = Post::find($id);
         return view('post/edit')->with('post', $a);
 
     }

@@ -4,7 +4,7 @@ use Illuminate\Http\Request;
 use App\Models\User;
 use Illuminate\Support\Facades\Auth;
 use App\Models\Personalinfo;
-
+use Illuminate\Support\Facades\DB;
 
 class PersonalinfosController extends Controller
 {
@@ -19,7 +19,7 @@ class PersonalinfosController extends Controller
         $a = Auth::user();
         $user = User::find($a->id);
         
-        return view('geninfo.index')->with('personal_information', $user->Personalinfo);
+        return view('geninfo.index')->with('pinfo', $user->Personalinfo);
     }
 
     // points to create view
@@ -76,9 +76,19 @@ return redirect('geninfo')->with('success', 'Personal Info added');
     }
 
     public function edit($id)
-    {
-        $a = Personalinfo::find($id);
-        return view('geninfo/edit')->with('geninfo', $a);
+    {   $edward_error = 'fcking error';
+        // $a = Personalinfo::find($user_id);
+        $user = Auth::user();
+        //this one ensures that it only querries your own data
+        $a = DB::table('personal_information')->where('user_id', $user->id)->find($id);
+        
+        try {
+            return view('geninfo/edit')->with('geninfo', $a);
+          }
+           catch (\Exception $e) {
+              return $edward_error;
+          }
+        
     }
 
     
@@ -113,7 +123,6 @@ return redirect('geninfo')->with('success', 'Personal Info added');
         $a->tel_number = $request->input('tel_number');
         $a->cp_number = $request->input('cp_number');
         $a->save();
-
         return redirect('geninfo')->with('success', 'Work Experience updated');
     }
 
