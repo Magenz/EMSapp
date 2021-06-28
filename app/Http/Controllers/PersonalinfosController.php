@@ -123,7 +123,7 @@ return redirect('geninfo')->with('success', 'Personal Info added');
         $a->tel_number = $request->input('tel_number');
         $a->cp_number = $request->input('cp_number');
         $a->save();
-        return redirect('geninfo')->with('success', 'Work Experience updated');
+        return redirect('geninfo')->with('success', 'Personal Information Updated');
     }
 
     public function destroy($id)

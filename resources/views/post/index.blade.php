@@ -1,11 +1,6 @@
 {{--
 quick note:
-$posts variable is comming from Post model
-it grabs in plural form which turns into $posts
-
-im not sure though hahahahahah
-i havn't tested it yet.
-This is just my theory.
+$posts comes from postsController
     --}}
 
 @extends('layouts/app')
