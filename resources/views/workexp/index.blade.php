@@ -13,13 +13,16 @@
                     <a href="/workexp/create">
                         <button class="btn btn-primary mb-2"> Add Work Experience</button>
                     </a> 
+                    <div class="table-responsive">
+
+                   
                     <table class="table table-striped">
                         <thead class="thead-light">
                         <tr>
                             <th>From</th>
                             <th>To</th>
                             <th>Position</th>
-                            <th>Department</th>
+                            <th>Company/Department</th>
                             <th>Salary</th>
                             <th>Salary Grade</th>
                             <th>Appointment Status</th>
@@ -55,11 +58,12 @@
                                 {{-- end of two buttons --}}
                             </tr>   
                             @endforeach
-                        
+                            {{$workexperience->links()}}
                           @else
                                     <h5>You have no workexp</h5>
                         @endif  
                     </table>
+                </div>
                 </div>
             </div>
         </div>

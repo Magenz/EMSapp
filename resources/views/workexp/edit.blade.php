@@ -50,7 +50,7 @@
                         </div>
                         <div class="col-xs-12 col-sm-12 col-md-12 px-7 pt-2">
                             <div class="form-group">
-                                <strong>Department</strong>
+                                <strong>Company/Department</strong>
                                 <input type="text" name="department" value="{{$workexp->department}}" class="form-control">
                             </div>
                         </div>

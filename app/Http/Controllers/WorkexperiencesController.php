@@ -14,9 +14,10 @@ class WorkexperiencesController extends Controller
     }
     public function index()
     {
+    //with pagination, this is how u do it =) im a fcking GOD
     $a = Auth::user();
-    $user = User::find($a->id);
-    return view('workexp.index')->with('workexperience', $user->Workexperience);
+    $user = User::find($a->id)->Workexperience()->paginate(10);
+    return view('workexp.index')->with('workexperience', $user);
     }
     // points to create view
     public function create()

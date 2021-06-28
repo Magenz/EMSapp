@@ -22,6 +22,8 @@ $posts comes from postsController
             <small>written on: {{$post->created_at}} by: {{$post->user->name}}</small><hr>
             <div class="d-flex flex-row">
                 @auth
+                @if ($post->user_id == auth()->user()->id)
+                    
                 <div class="p-2">
                     {{-- edit --}}
                     <a href="/post/{{$post->id}}/edit">
@@ -38,6 +40,8 @@ $posts comes from postsController
                         </button>
                     </form>    
                 </div>
+
+                @endif
                 @endauth
     
               </div>
