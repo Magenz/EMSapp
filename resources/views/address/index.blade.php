@@ -10,7 +10,7 @@
         @else
         {{-- profile will show --}}
             <div>
-                <h4 class="text-primary">Address Details</h4> 
+                <h3 class="text-dark">Address Details</h3> 
                 </div>
                 <div><a href="/address/{{$address->id}}/edit">
                 <button class="btn btn-primary pull-right">Edit</button>

@@ -6,7 +6,7 @@
     <div class="row justify-content-center">
         <div class="col-md-12">
             <div class="card">
-                <div class="card-header">{{ __('work experience') }}</div>
+                <div class="card-header text-dark">Work Experience</div>
 
                 <div class="card-body">
                     {{-- create workexp--}}
@@ -34,7 +34,7 @@
                        @if (count($workexperience)>0)
                        <h3>Your workexperience</h3>
                             @foreach ($workexperience as $p)
-                            <tr>
+                            <tr class="text-dark">
                                 <td>{{$p->dateFrom}}</td>
                                 <td>{{$p->dateTo}}</td>
                                 <td>{{$p->positionTitle}}</td>

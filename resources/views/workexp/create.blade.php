@@ -5,7 +5,7 @@
     <div class="row justify-content-center">
         <div class="col-md-12">
             <div class="card">
-                <div class="card-header">{{ __('work experience') }}</div>
+                <div class="card-header text-dark">Work Experience</div>
 
                 <div class="card-body">
     <div class="row">

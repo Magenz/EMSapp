@@ -1,4 +1,5 @@
-<div class=" col-md-12 bg-light m-1 p-3"><h3><strong>Current Address</strong></h3></div>
+
+<div class=" col-lg-12 mt-4 text-dark"><h3><strong>Current Address</strong></h3></div>
 
 <div class="shadow-sm col-md-3 bg-light m-1 p-3">
     <h5 class="mt-3"><p class="text-secondary">House Block</p></h5>           
@@ -58,7 +59,7 @@
     </div>
 </div>
 
-<div class=" col-md-12 bg-light m-1 p-3"><h3><strong>Permanent Address</strong></h3></div>
+<div class=" col-lg-12 mt-4 text-dark"><h3><strong>Permanent Address</strong></h3></div>
          
 
 

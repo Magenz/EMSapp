@@ -5,8 +5,9 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>Employee Management System</title>
         <link rel="stylesheet" href="{{asset('css/app.css')}}">
+        <link rel="stylesheet" href="{{asset('css/styles.css')}}">
     </head>
-    <body>
+    <body class="bg-info">
         @include('inc.navbar')
         <div></div>
         <div class="container">
