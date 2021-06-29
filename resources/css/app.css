@@ -1,3 +1,7 @@
-.bg-classic {
-    background: #BBD9F2;
-}
+@import '~@fortawesome/fontawesome-free/css/fontawesome';
+@import '~@fortawesome/fontawesome-free/css/regular';
+@import '~@fortawesome/fontawesome-free/css/solid';
+@import '~@fortawesome/fontawesome-free/css/brands';
+
+
+@import url('https://fonts.googleapis.com/css?family=Nunito');

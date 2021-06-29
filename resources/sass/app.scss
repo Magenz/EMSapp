@@ -1,3 +1,9 @@
+@import '~@fortawesome/fontawesome-free/css/fontawesome';
+@import '~@fortawesome/fontawesome-free/css/regular';
+@import '~@fortawesome/fontawesome-free/css/solid';
+@import '~@fortawesome/fontawesome-free/css/brands';
+
+
 // Fonts
 @import url('https://fonts.googleapis.com/css?family=Nunito');
 
@@ -8,4 +14,5 @@
 @import '~bootstrap/scss/bootstrap';
 
 //AdminLTE
-@import 'admin-lte/dist/css/adminlte.css';
+@import '~admin-lte/dist/css/adminlte.css';
+//font Awsome
