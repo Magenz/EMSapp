@@ -8,7 +8,7 @@
         <link rel="stylesheet" href="{{asset('css/styles.css')}}">
         <link rel="stylesheet" href="{{ mix('css/app.css') }}">
     </head>
-    <body class="bg-info">
+    <body class="bg-primary">
         @include('inc.navbar')
         <div></div>
         <div class="container">

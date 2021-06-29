@@ -8,7 +8,7 @@
                Edit Post
             </div>
             <div class="pull-right">
-                <a class="btn btn-primary" href="{{ route('post.index') }}" title="Go back"> <i class="fas fa-backward "><< Back</i> </a>
+                <a class="btn btn-primary" href="{{ route('post.index') }}" title="Go back"> <i class="fas fa-backward ">  Back</i> </a>
             </div>
         </div>
     </div>

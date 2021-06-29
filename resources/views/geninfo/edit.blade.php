@@ -5,7 +5,7 @@
     <div class="row justify-content-center">
         <div class="col-md-12">
             <div class="card">
-                <div class="card-header text-dark">Work Experience</div>
+                <div class="card-header text-dark">General Information</div>
 
                 <div class="card-body">
                     <div class="row">
@@ -14,7 +14,7 @@
                                 Edit Experience
                             </div>
                             <div class="">
-                                <a class="btn btn-primary" href="{{ route('geninfo.index') }}" title="Go back"> <i class="fas fa-backward "><< Back</i> </a>
+                                <a class="btn btn-primary" href="{{ route('geninfo.index') }}" title="Go back"> <i class="fas fa-backward ">  Back</i> </a>
                             </div>
                     </div>
                 </div>

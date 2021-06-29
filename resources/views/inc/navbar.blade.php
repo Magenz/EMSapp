@@ -1,8 +1,9 @@
-<nav class="navbar navbar-expand-lg navbar-light bg-primary shadow p-3 mb-3 fix-top">
+<nav class="navbar navbar-expand-lg navbar-light text-light bg-transparent shadow p-3 mb-3 fix-top">
     <div class="container-fluid">   
       <a class="navbar-brand" href="/"> <strong class="text-light">EMS APP</strong></a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
+        <i class="fa fa-tachometer-alt mr-1"></i>
       </button>
       <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav">
@@ -20,7 +21,7 @@
               <li><a class="dropdown-item" href="/geninfo">General Information</a></li>
               <li><a class="dropdown-item" href="/address">Address</a></li>
               {{-- <li><hr class="dropdown-divider"></li> --}}
-{{-- FAMILY BACKGROUND               --}}
+{{-- FAMILY BACKGROUND --}}
             </ul>
             </h5>
           </li>
@@ -33,19 +34,15 @@
               <li><a class="dropdown-item" href="/geninfo">Family Background</a></li>
               <li><a class="dropdown-item" href="/address">Children</a></li>
               {{-- <li><hr class="dropdown-divider"></li> --}}
-              
             </ul>
           </h5> 
           </li>
-
           <li class="nav-item">
             <a class="nav-link" href="/workexp"><h5 class="text-light mx-2">Experience</h5> </a>
           </li>
-
           <li class="nav-item">
             <a class="nav-link" href="/workexp"><h5 class="text-light mx-2">Eligibility</h5> </a>
           </li>
-
           @endauth  
         </ul>
          

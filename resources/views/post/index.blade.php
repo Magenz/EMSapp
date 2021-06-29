@@ -10,7 +10,15 @@ $posts comes from postsController
 @auth
         <a href="/post/create">
             <button type="submit" class="btn btn-secondary mb-2">
-            Create New Post
+           
+            <div class="d-flex">
+                <div>
+                    <i class="fa fa-plus-circle"></i>
+                </div>
+                <div class="ml-2">
+                    Create New Post
+                </div>
+                </div>  
             </button>
         </a>  
 @endauth
@@ -27,7 +35,16 @@ $posts comes from postsController
                 <div class="p-2">
                     {{-- edit --}}
                     <a href="/post/{{$post->id}}/edit">
-                        <button class ="btn btn-primary">Edit </button>
+                        <button class ="btn btn-primary">
+                            <div class="d-flex">
+                                <div>
+                                    <i class="fa fa-edit"></i>
+                                </div>
+                                <div class="ml-2">
+                                    Edit
+                                </div>
+                                </div>  
+                        </button>
                     </a>
                 </div>
                 <div class="p-2">
@@ -36,7 +53,14 @@ $posts comes from postsController
                         @csrf
                         @method('DELETE')
                         <button type="submit" title="delete" class="btn btn-danger pull-right">
-                        Delete
+                            <div class="d-flex">
+                                <div>
+                                    <i class="fa fa-trash"></i>
+                                </div>
+                                <div class="ml-2">
+                                    Del
+                                </div>
+                                </div>  
                         </button>
                     </form>    
                 </div>

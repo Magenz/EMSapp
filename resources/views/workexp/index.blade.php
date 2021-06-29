@@ -45,13 +45,32 @@
                                 <td>{{$p->govService}}</td>
                                 
                                 {{-- Start of two buttons --}}
-                                <td><a href="/workexp/{{$p->id}}/edit"><button class="btn btn-secondary">Edit</button> </a></td>
+                                <td><a href="/workexp/{{$p->id}}/edit">
+                                    <button class="btn btn-secondary">
+                                            <div class="d-flex">
+                                            <div>
+                                                <i class="fa fa-edit"></i>
+                                            </div>
+                                            <div class="ml-2">
+                                                Edit  
+                                            </div>
+                                            </div>     
+                                    </button> 
+                                    </a>
+                                </td>
                                 <td>
                                     <form action="{{ route('workexp.destroy', $p->id) }}" method="POST">
                                         @csrf
                                         @method('DELETE')
                                         <button type="submit" title="delete" class="btn btn-danger">
-                                        Delete
+                                         <div class="d-flex">
+                                            <div>
+                                                <i class="fa fa-trash"></i>
+                                            </div>
+                                            <div class="ml-2">
+                                                Del
+                                            </div>
+                                            </div>     
                                         </button>
                                     </form>    
                                 </td>

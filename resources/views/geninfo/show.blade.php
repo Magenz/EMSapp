@@ -1,5 +1,5 @@
 
-<div class="shadow-sm col-md-5 bg-light m-1 p-3">
+<div class="card col-md-5 bg-light m-1 p-3">
            
             <h5 class="mt-3">
                 <p class="text-secondary">Full Name</p>
@@ -12,7 +12,7 @@
 
 </div>          
             
-<div class="shadow-sm col-md-3 bg-light m-1 p-3">
+<div class="card col-md-3 bg-light m-1 p-3">
         <h5 class="mt-3">
             <p class="text-secondary">Citizenship</p>
         </h5>
@@ -21,7 +21,7 @@
             <h5>{{$pinfo->citizenship}}</h5>
         </div>
 </div>
-<div class="shadow-sm col-md-3 bg-light m-1 p-3">
+<div class="card col-md-3 bg-light m-1 p-3">
     <h5 class="mt-3">
         <p class="text-secondary">Civil Status</p>
     </h5>
@@ -30,7 +30,7 @@
         <h5>{{$pinfo->civil_status}}</h5>
     </div>
 </div>
-<div class="shadow-sm col-md-2 bg-light m-1 p-3">
+<div class="card col-md-2 bg-light m-1 p-3">
     <h5 class="mt-3">
         <p class="text-secondary">Gender</p>
     </h5>
@@ -40,7 +40,7 @@
     </div>
 </div>
 
-<div class="shadow-sm col-md-3 bg-light m-1 p-3">
+<div class="card col-md-3 bg-light m-1 p-3">
     <h5 class="mt-3">
         <p class="text-secondary">Birth Date <small>(mm/dd/yyyy)</small></p>
     </h5>
@@ -50,7 +50,7 @@
     </div>
 </div>
 
-<div class="shadow-sm col-md-6 bg-light m-1 p-3">
+<div class="card col-md-6 bg-light m-1 p-3">
     <h5 class="mt-3">
         <p class="text-secondary">Birth Place</p>
     </h5>
@@ -60,7 +60,7 @@
     </div>
 </div>
 
-<div class="shadow-sm col-md-4 bg-light m-1 p-3">
+<div class="card col-md-4 bg-light m-1 p-3">
     <h5 class="mt-3">
         <p class="text-secondary">Height</p>
     </h5>
@@ -70,7 +70,7 @@
     </div>
 </div>
 
-<div class="shadow-sm col-md-4 bg-light m-1 p-3">
+<div class="card col-md-4 bg-light m-1 p-3">
     <h5 class="mt-3">
         <p class="text-secondary">Weight</p>
     </h5>
@@ -80,7 +80,7 @@
     </div>
 </div>
 
-<div class="shadow-sm col-md-3 bg-light m-1 p-3">
+<div class="card col-md-3 bg-light m-1 p-3">
     <h5 class="mt-3">
         <p class="text-secondary">Blood Type</p>
     </h5>
@@ -90,7 +90,7 @@
     </div>
 </div>
 
-<div class="shadow-sm col-md-3 bg-light m-1 p-3">
+<div class="card col-md-3 bg-light m-1 p-3">
     <h5 class="mt-3">
         <p class="text-secondary">GSIS</p>
     </h5>
@@ -99,7 +99,7 @@
         <h5>{{$pinfo->gsis}}</h5>
     </div>
 </div>
-<div class="shadow-sm col-md-4 bg-light m-1 p-3">
+<div class="card col-md-4 bg-light m-1 p-3">
     <h5 class="mt-3">
         <p class="text-secondary">PAGIBIG</p>
     </h5>
@@ -109,7 +109,7 @@
     </div>
 </div>
 
-<div class="shadow-sm col-md-4 bg-light m-1 p-3">
+<div class="card col-md-4 bg-light m-1 p-3">
     <h5 class="mt-3">
         <p class="text-secondary">PHILHEALTH</p>
     </h5>
@@ -119,7 +119,7 @@
     </div>
 </div>
 
-<div class="shadow-sm col-md-3 bg-light m-1 p-3">
+<div class="card col-md-3 bg-light m-1 p-3">
     <h5 class="mt-3">
         <p class="text-secondary">S.S.S.</p>
     </h5>
@@ -128,7 +128,7 @@
         <h5>{{$pinfo->sss}}</h5>
     </div>
 </div>
-<div class="shadow-sm col-md-3 bg-light m-1 p-3">
+<div class="card col-md-3 bg-light m-1 p-3">
     <h5 class="mt-3">
         <p class="text-secondary">TIN</p>
     </h5>
@@ -138,7 +138,7 @@
     </div>
 </div>
 
-<div class="shadow-sm col-md-5 bg-light m-1 p-3">
+<div class="card col-md-5 bg-light m-1 p-3">
     <h5 class="mt-3">
         <p class="text-secondary">Contact Numbers</p>
     </h5>
