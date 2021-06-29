@@ -32,10 +32,15 @@ class User extends Authenticatable
     public function workexperience(){
         return $this->hasMany('App\Models\Workexperience')->orderBy('dateFrom', 'desc');
     }
+    //eligibility
+    public function eligibility(){
+        return $this->hasMany('App\Models\Eligibility');
+    }
      //personal information model relationship
      public function personalinfo(){
         return $this->hasOne('App\Models\Personalinfo');
     }
+    //address
     public function address(){
         return $this->hasOne('App\Models\Address');
     }
