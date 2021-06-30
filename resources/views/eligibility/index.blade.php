@@ -83,7 +83,7 @@
                             @endforeach
                             {{$eligibility->links()}}
                           @else
-                                    <h5>You have no Eligibility</h5>
+                            <h5 class='text-dark'>You have no Eligibility</h5>
                         @endif  
                     </table>
                 </div>

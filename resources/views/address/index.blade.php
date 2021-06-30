@@ -13,7 +13,7 @@
                 <h1 class="text-dark">Address Details</h1> 
                 </div>
                 <div><a href="/address/{{$address->id}}/edit">
-                <button class="btn btn-primary pull-right">
+                <button class="btn btn-secondary">
                     <div class="d-flex">
                         <div>
                             <i class="fa fa-edit"></i>

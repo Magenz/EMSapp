@@ -52,6 +52,10 @@ class User extends Authenticatable
     public function address(){
         return $this->hasOne('App\Models\Address');
     }
+     //address
+     public function family(){
+        return $this->hasOne('App\Models\Family');
+    }
    
    
     

@@ -42,6 +42,7 @@ Route::resource('address', '\App\Http\Controllers\AddressesController');
 Route::resource('eligibility', '\App\Http\Controllers\EligibilitiesController');
 Route::resource('education', '\App\Http\Controllers\EducationsController');
 Route::resource('learninganddevelopment', '\App\Http\Controllers\LearninganddevelopmentsController');
+Route::resource('family', '\App\Http\Controllers\FamiliesController');
 
 Auth::routes();
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
