@@ -15,25 +15,25 @@ class CreatePersonalInformationTable extends Migration
     {
         Schema::create('personal_information', function (Blueprint $table) {
             $table->id();
-            $table->string('surname');
-            $table->string('first_name');
-            $table->string('middle_name');
-            $table->string('name_extention');
-            $table->string('ciizenship');
-            $table->string('civil_status');
-            $table->string('gender');
-            $table->string('birth_date');
-            $table->string('birth_place');
-            $table->string('height');
-            $table->string('weight');
-            $table->string('blood_type');
-            $table->string('gsis');
-            $table->string('pagibig');
-            $table->string('philhealth');
-            $table->string('sss');
-            $table->string('tin');
-            $table->string('tel_number');
-            $table->string('cp_numnber');
+            $table->string('surname')->nullable();
+            $table->string('first_name')->nullable();
+            $table->string('middle_name')->nullable();
+            $table->string('name_extention')->nullable();
+            $table->string('ciizenship')->nullable();
+            $table->string('civil_status')->nullable();
+            $table->string('gender')->nullable();
+            $table->string('birth_date')->nullable();
+            $table->string('birth_place')->nullable();
+            $table->string('height')->nullable();
+            $table->string('weight')->nullable();
+            $table->string('blood_type')->nullable();
+            $table->string('gsis')->nullable();
+            $table->string('pagibig')->nullable();
+            $table->string('philhealth')->nullable();
+            $table->string('sss')->nullable();
+            $table->string('tin')->nullable();
+            $table->string('tel_number')->nullable();
+            $table->string('cp_numnber')->nullable();
             
 
             $table->timestamps();

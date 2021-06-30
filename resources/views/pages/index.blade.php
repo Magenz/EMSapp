@@ -22,7 +22,7 @@
       <div class="d-flex flex-column">
         <a href="geninfo" class="btn btn-success mt-1">General Information</a>
         <a href="address" class="btn btn-success mt-1">Address</a>
-        <a href="#" class="btn btn-success mt-1">Eligibility</a>
+        <a href="eligibility" class="btn btn-success mt-1">Eligibility</a>
       </div>
     
     </div>

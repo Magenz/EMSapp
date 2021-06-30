@@ -15,22 +15,22 @@ class CreateFamilyTable extends Migration
     {
         Schema::create('family', function (Blueprint $table) {
             $table->id();
-            $table->string('spouse_surname');
-            $table->string('spouse_firstname');
-            $table->string('spouse_middlename');
-            $table->string('spouse_name_ext');
-            $table->string('spouse_occupation');
-            $table->string('spouse_employer_business');
-            $table->string('spouse_business_address');
-            $table->string('spouse_tel_number');
-            $table->string('father_surname');
-            $table->string('father_firstname');
-            $table->string('father_middlename');
-            $table->string('father_name_ext');
-            $table->string('mother_maiden_name');
-            $table->string('mother_surname');
-            $table->string('mother_firstname');
-            $table->string('mother_middlename');
+            $table->string('spouse_surname')->nullable();
+            $table->string('spouse_firstname')->nullable();
+            $table->string('spouse_middlename')->nullable();
+            $table->string('spouse_name_ext')->nullable();
+            $table->string('spouse_occupation')->nullable();
+            $table->string('spouse_employer_business')->nullable();
+            $table->string('spouse_business_address')->nullable();
+            $table->string('spouse_tel_number')->nullable();
+            $table->string('father_surname')->nullable();
+            $table->string('father_firstname')->nullable();
+            $table->string('father_middlename')->nullable();
+            $table->string('father_name_ext')->nullable();
+            $table->string('mother_maiden_name')->nullable();
+            $table->string('mother_surname')->nullable();
+            $table->string('mother_firstname')->nullable();
+            $table->string('mother_middlename')->nullable();
             $table->timestamps();
 
         });

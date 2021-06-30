@@ -16,21 +16,21 @@ class CreateAddressTable extends Migration
         Schema::create('address', function (Blueprint $table) {
             $table->id();
             //current or residing address
-            $table->string('res_hbl');
-            $table->string('res_street');
-            $table->string('res_subvil');
-            $table->string('res_barangay');
-            $table->string('res_city');
-            $table->string('res_province');
-            $table->string('res_zipcode');
+            $table->string('res_hbl')->nullable();
+            $table->string('res_street')->nullable();
+            $table->string('res_subvil')->nullable();
+            $table->string('res_barangay')->nullable();
+            $table->string('res_city')->nullable();
+            $table->string('res_province')->nullable();
+            $table->string('res_zipcode')->nullable();
              //permanent address
-            $table->string('perm_hbl');
-            $table->string('perm_street');
-            $table->string('perm_subvil');
-            $table->string('perm_barangay');
-            $table->string('perm_city');
-            $table->string('perm_province');
-            $table->string('perm_zipcode');
+            $table->string('perm_hbl')->nullable();
+            $table->string('perm_street')->nullable();
+            $table->string('perm_subvil')->nullable();
+            $table->string('perm_barangay')->nullable();
+            $table->string('perm_city')->nullable();
+            $table->string('perm_province')->nullable();
+            $table->string('perm_zipcode')->nullable();
         
             $table->timestamps();
         });

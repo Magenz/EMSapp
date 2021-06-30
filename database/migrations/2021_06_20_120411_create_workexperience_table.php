@@ -15,14 +15,14 @@ class CreateWorkexperienceTable extends Migration
     {
         Schema::create('workexperience', function (Blueprint $table) {
             $table->id();
-            $table->string('dateFrom');
-            $table->string('dateTo');
-            $table->string('positionTitle');
-            $table->string('department');
-            $table->decimal('monthlySalary');
-            $table->string('salaryGrade');
-            $table->string('appointmentStatus');
-            $table->string('govService');
+            $table->string('dateFrom')->nullable();
+            $table->string('dateTo')->nullable();
+            $table->string('positionTitle')->nullable();
+            $table->string('department')->nullable();
+            $table->decimal('monthlySalary')->nullable();
+            $table->string('salaryGrade')->nullable();
+            $table->string('appointmentStatus')->nullable();
+            $table->string('govService')->nullable();
             $table->timestamps();
         });
     }
