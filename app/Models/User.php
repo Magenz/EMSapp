@@ -36,6 +36,10 @@ class User extends Authenticatable
     public function eligibility(){
         return $this->hasMany('App\Models\Eligibility');
     }
+     //education
+     public function education(){
+        return $this->hasMany('App\Models\Education');
+    }
      //personal information model relationship
      public function personalinfo(){
         return $this->hasOne('App\Models\Personalinfo');
