@@ -1,9 +1,9 @@
 <nav class="navbar navbar-expand-lg navbar-light text-light bg-transparent shadow p-3 mb-3 fix-top">
     <div class="container-fluid">   
       <a class="navbar-brand" href="/"> <strong class="text-light">EMS APP</strong></a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <button class="navbar-toggler " type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
-        <i class="fa fa-tachometer-alt mr-1"></i>
+        
       </button>
       <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav">

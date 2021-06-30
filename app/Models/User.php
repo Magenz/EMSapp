@@ -40,6 +40,10 @@ class User extends Authenticatable
      public function education(){
         return $this->hasMany('App\Models\Education');
     }
+    //education
+    public function learninganddevelopment(){
+        return $this->hasMany('App\Models\Learninganddevelopment');
+    }
      //personal information model relationship
      public function personalinfo(){
         return $this->hasOne('App\Models\Personalinfo');

@@ -11,6 +11,8 @@
       <p>Personal Dashboard</p> 
     </div>
   </div>
+  @auth
+      
   
 <div class="d-flex flex-wrap justify-content-center">
 
@@ -20,9 +22,9 @@
       <p class="card-text">Contains most of your personal details.</p>
      
       <div class="d-flex flex-column">
-        <a href="geninfo" class="btn btn-success mt-1">General Information</a>
-        <a href="address" class="btn btn-success mt-1">Address</a>
-        <a href="eligibility" class="btn btn-success mt-1">Eligibility</a>
+        <a href="geninfo" class="btn bg-purple mt-1">General Information</a>
+        <a href="address" class="btn bg-purple mt-1">Address</a>
+        <a href="eligibility" class="btn bg-purple mt-1">Eligibility</a>
       </div>
     
     </div>
@@ -33,8 +35,8 @@
       <h5 class="card-title">My Educational Background</h5>
       <p class="card-text">Contains your school details,<br> seminars, and other learning activities.</p>
       <div class="d-flex flex-column">
-      <a href="#" class="btn btn-success mt-1">School</a>
-      <a href="#" class="btn btn-success mt-1">Learning and Development</a>
+      <a href="/education" class="btn bg-purple mt-1">Education</a>
+      <a href="/learninganddevelopment" class="btn bg-purple mt-1">Learning and Development</a>
       </div>
     </div>
   </div>
@@ -44,8 +46,8 @@
       <h5 class="card-title">Family Background</h5>
       <p class="card-text">Contains my family background information.</p>
       <div class="d-flex flex-column">
-      <a href="#" class="btn btn-success mt-1">Parents</a>
-      <a href="#" class="btn btn-success mt-1">My Children</a>
+      <a href="#" class="btn bg-purple mt-1">Parents</a>
+      <a href="#" class="btn bg-purple mt-1">My Children</a>
       </div>
     </div>
   </div>
@@ -55,13 +57,18 @@
       <h5 class="card-title">Experience</h5>
       <p class="card-text">Contains my work related experiences.</p>
       <div class="d-flex flex-column">
-      <a href="workexp" class="btn btn-success mt-1">Work Experiences</a>
-      <a href="#" class="btn btn-success mt-1">Voluntary Works</a>
+      <a href="workexp" class="btn bg-purple mt-1">Work Experiences</a>
+      <a href="#" class="btn bg-purple mt-1">Voluntary Works</a>
       </div>
     </div>
   </div>
 
    
 </div> 
+@endauth
+
+@guest
+    <h1>Only Registered User Can Access The Dashboard</h1>
+@endguest
 @endsection
 
