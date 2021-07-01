@@ -40,9 +40,13 @@ class User extends Authenticatable
      public function education(){
         return $this->hasMany('App\Models\Education');
     }
-    //education
+    //Learning and Development
     public function learninganddevelopment(){
         return $this->hasMany('App\Models\Learninganddevelopment');
+    }
+     //Children
+     public function children(){
+        return $this->hasMany('App\Models\Children');
     }
      //personal information model relationship
      public function personalinfo(){

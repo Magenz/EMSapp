@@ -47,7 +47,7 @@
       <p class="card-text">Contains my family background information.</p>
       <div class="d-flex flex-column">
       <a href="/family" class="btn bg-purple mt-1">Spouse and Parents</a>
-      <a href="#" class="btn bg-purple mt-1">My Children</a>
+      <a href="/children" class="btn bg-purple mt-1">My Children</a>
       </div>
     </div>
   </div>
@@ -58,7 +58,7 @@
       <p class="card-text">Contains my work related experiences.</p>
       <div class="d-flex flex-column">
       <a href="workexp" class="btn bg-purple mt-1">Work Experiences</a>
-      <a href="#" class="btn bg-purple mt-1">Voluntary Works</a>
+      <a href="voluntarywork" class="btn bg-purple mt-1">Voluntary Works</a>
       </div>
     </div>
   </div>
