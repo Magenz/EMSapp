@@ -44,6 +44,7 @@ Route::resource('education', '\App\Http\Controllers\EducationsController');
 Route::resource('learninganddevelopment', '\App\Http\Controllers\LearninganddevelopmentsController');
 Route::resource('family', '\App\Http\Controllers\FamiliesController');
 Route::resource('children', '\App\Http\Controllers\ChildrensController');
+Route::resource('voluntarywork', '\App\Http\Controllers\VoluntaryworksController');
 
 Auth::routes();
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');

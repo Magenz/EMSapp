@@ -5,14 +5,14 @@
     <div class="row justify-content-center">
         <div class="col-md-12">
             <div class="card">
-                <div class="card-header text-dark">Child</div>
+                <div class="card-header text-dark">Voluntary Work</div>
 
                 <div class="card-body">
     <div class="row">
         <div class="col-lg-12 margin-tb">
             
             <div class="">
-                <a class="btn btn-primary" href="{{ route('children.index') }}" title="Go back"> <i class="fas fa-backward ">  Back</i> </a>
+                <a class="btn bg-blue" href="{{ route('voluntarywork.index') }}" title="Go back"> <i class="fas fa-backward ">  Back</i> </a>
             </div>
         </div>
     </div>
@@ -23,21 +23,39 @@
 
     <div class="w-2/3 mx-auto">
         <div class="bg-white shadow-md rounded my-6">
-                <form action="{{route('children.update', $children->id)}}" method="POST">
+                <form action="{{route('voluntarywork.update', $voluntarywork->id)}}" method="POST">
                     @csrf 
                     @method('PUT') 
                     <div class="row">
                        {{-- textfields --}}
                         <div class="col-xs-12 col-sm-12 col-md-12 px-7 pt-2">
                             <div class="form-group">
-                                <strong>Child Name</strong>
-                                <input type="text" name="childName" value="{{$children->childName}}" class="form-control">
+                                <strong>Work Position</strong>
+                                <input type="text" name="workPosition" value="{{$voluntarywork->workPosition}}" class="form-control">
                             </div>
                         </div>
                         <div class="col-xs-12 col-sm-12 col-md-12 px-7 pt-2">
                             <div class="form-group">
-                                <strong>Birth Date (mm/dd/yyyy)</strong>
-                                <input type="text" name="birthDate" value="{{$children->birthDate}}" class="form-control">
+                                <strong>Company / Organization / Program</strong>
+                                <input type="text" name="workPlace" value="{{$voluntarywork->workPlace}}" class="form-control">
+                            </div>
+                        </div>
+                        <div class="col-xs-12 col-sm-12 col-md-12 px-7 pt-2">
+                            <div class="form-group">
+                                <strong>Work Address</strong>
+                                <input type="text" name="workAddress" value="{{$voluntarywork->workAddress}}" class="form-control">
+                            </div>
+                        </div>
+                        <div class="col-xs-12 col-sm-12 col-md-12 px-7 pt-2">
+                            <div class="form-group">
+                                <strong>From (mm/dd/yyyy)</strong>
+                                <input type="text" name="dateFrom" value="{{$voluntarywork->dateFrom}}" class="form-control">
+                            </div>
+                        </div>
+                        <div class="col-xs-12 col-sm-12 col-md-12 px-7 pt-2">
+                            <div class="form-group">
+                                <strong>To (mm/dd/yyyy)</strong>
+                                <input type="text" name="dateTo" value="{{$voluntarywork->dateTo}}" class="form-control">
                             </div>
                         </div>
                        

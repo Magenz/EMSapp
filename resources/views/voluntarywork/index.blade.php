@@ -6,18 +6,18 @@
     <div class="row justify-content-center">
         <div class="col-md-12">
             <div class="card">
-                <div class="card-header text-dark">Children</div>
+                <div class="card-header text-dark">Voluntary Work</div>
 
                 <div class="card-body">
-                    {{-- create children--}}
-                    <a href="/children/create">
+                    {{-- create voluntarywork--}}
+                    <a href="/voluntarywork/create">
                         <button class="btn btn-success mb-2"> 
                         <div class="d-flex">
                             <div>
                                 <i class="fas fa-plus-circle mr-2"></i>
                             </div>
                             <div>
-                                Add Children
+                                Add Voluntary Work
                             </div>
                         </div>
                         </button>
@@ -27,21 +27,27 @@
                     <table class="table table-striped">
                         <thead class="thead-light">
                         <tr>
-                            <th>Child Name</th>
-                            <th>Birth Date</th>
+                            <th>Work Position</th>
+                            <th>Organization / Company / Program</th>
+                            <th>Address</th>
+                            <th>From</th>
+                            <th>To</th>
                             <th></th>
                             <th></th>
                         </tr>
                         </thead>
-                       @if (count($children)>0)
-                       <h3>Your children</h3>
-                            @foreach ($children as $p)
+                       @if (count($voluntarywork)>0)
+                       <h3>Your voluntarywork</h3>
+                            @foreach ($voluntarywork as $p)
                             <tr class="text-dark">
-                                <td>{{$p->childName}}</td>
-                                <td>{{$p->birthDate}}</td>
-
+                                <td>{{$p->workPosition}}</td>
+                                <td>{{$p->workPlace}}</td>
+                                <td>{{$p->workAddress}}</td>
+                                <td>{{$p->dateFrom}}</td>
+                                <td>{{$p->dateTo}}</td>
+                               
                                 {{-- Start of two buttons --}}
-                                <td><a href="/children/{{$p->id}}/edit">
+                                <td><a href="/voluntarywork/{{$p->id}}/edit">
                                     <button class="btn btn-secondary">
                                             <div class="d-flex">
                                             <div>
@@ -55,7 +61,7 @@
                                     </a>
                                 </td>
                                 <td>
-                                    <form action="{{ route('children.destroy', $p->id) }}" method="POST">
+                                    <form action="{{ route('voluntarywork.destroy', $p->id) }}" method="POST">
                                         @csrf
                                         @method('DELETE')
                                         <button type="submit" title="delete" class="btn btn-danger">
@@ -73,9 +79,9 @@
                                 {{-- end of two buttons --}}
                             </tr>   
                             @endforeach
-                            {{$children->links()}}
+                            {{$voluntarywork->links()}}
                           @else
-                            <h5 class='text-dark'>You have no Children</h5>
+                            <h5 class='text-dark'>You have no Voluntary Work</h5>
                         @endif  
                     </table>
                 </div>

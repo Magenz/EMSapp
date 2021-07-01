@@ -48,6 +48,10 @@ class User extends Authenticatable
      public function children(){
         return $this->hasMany('App\Models\Children');
     }
+     //Voluntary Work
+     public function voluntarywork(){
+        return $this->hasMany('App\Models\Voluntarywork');
+    }
      //personal information model relationship
      public function personalinfo(){
         return $this->hasOne('App\Models\Personalinfo');
