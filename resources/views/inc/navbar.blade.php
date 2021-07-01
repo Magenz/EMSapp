@@ -20,29 +20,56 @@
             <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
               <li><a class="dropdown-item" href="/geninfo">General Information</a></li>
               <li><a class="dropdown-item" href="/address">Address</a></li>
+              <li><a class="dropdown-item" href="/eligibility">Eligibility</a></li>
               {{-- <li><hr class="dropdown-divider"></li> --}}
-{{-- FAMILY BACKGROUND --}}
             </ul>
             </h5>
           </li>
+
+
+{{-- Educ INFO --}}
+          <li class="nav-item dropdown">
+            <h5 class="text-dark">
+            <a class="nav-link dropdown-toggle text-light mx-2" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Education
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <li><a class="dropdown-item" href="/education">School</a></li>
+              <li><a class="dropdown-item" href="/learninganddevelopment">Learning and Development</a></li>
+              {{-- <li><hr class="dropdown-divider"></li> --}}
+            </ul>
+          </h5>
+        </li>
+{{-- FAMILY BACKGROUND --}}
           <li class="nav-item dropdown">
             <h5 class="text-dark">
               <a class="nav-link dropdown-toggle text-light mx-2" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
               Family
             </a>
             <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-              <li><a class="dropdown-item" href="/geninfo">Family Background</a></li>
-              <li><a class="dropdown-item" href="/address">Children</a></li>
+              <li><a class="dropdown-item" href="/family">Parents and Spouse</a></li>
+              <li><a class="dropdown-item" href="/children">Children</a></li>
               {{-- <li><hr class="dropdown-divider"></li> --}}
             </ul>
           </h5> 
           </li>
-          <li class="nav-item">
-            <a class="nav-link" href="/workexp"><h5 class="text-light mx-2">Experience</h5> </a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="/workexp"><h5 class="text-light mx-2">Eligibility</h5> </a>
-          </li>
+{{-- Experience --}}
+<li class="nav-item dropdown">
+  <h5 class="text-dark">
+    <a class="nav-link dropdown-toggle text-light mx-2" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+    Experience
+  </a>
+  <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+    <li><a class="dropdown-item" href="/workexp">Work Experience</a></li>
+    <li><a class="dropdown-item" href="/voluntarywork">Voluntary Works</a></li>
+    {{-- <li><hr class="dropdown-divider"></li> --}}
+  </ul>
+</h5> 
+</li>          
+
+
+         
+         
           @endauth  
         </ul>
          

@@ -1,18 +1,30 @@
 @extends('layouts.app')
 
 @section('content')
-<div class="container">
+<h1 class="text-light"><strong>My posted News</strong></h1>
+<hr>
+<div class="text-dark">
     <div class="row justify-content-center">
-        <div class="col-md-8">
+        <div class="col-md-12">
+                {{-- create post--}}
+                <a href="/post/create">
+                    <button type="submit" class="btn bg-green border-dark mb-3">
+                    <div class="d-flex">
+                        <div>
+                            <i class="fa fa-plus-circle"></i>
+                        </div>
+                        <div class="ml-2">
+                            Create New Post
+                        </div>
+                        </div>  
+                    </button>
+                </a>  
             <div class="card">
-                <div class="card-header">{{ __('Dashboard') }}</div>
+                <div class="card-header">{{ __('My Post') }}</div>
 
                 <div class="card-body">
-                    {{-- create post--}}
-                    <a href="/post/create">
-                        <button class="btn btn-primary mb-2"> Create Post</button>
-                    </a> 
-                    <h3>Your Post</h3>
+                
+               
                     <table class="table table-striped">
                         <tr>
                             <th>Title</th>

@@ -4,11 +4,9 @@
 
     <div class="row">
         <div class="col-lg-12 margin-tb">
-            <div class="pull-left">
-                Create New Post
-            </div>
+            
             <div class="">
-                <a class="btn btn-primary" href="{{ route('post.index') }}" title="Go back"> <i class="fas fa-backward ">  Back</i> </a>
+                <a class="btn bg-secondary mb-2" href="{{ route('post.index') }}" title="Go back"> <i class="fas fa-backward ">  Back</i> </a>
             </div>
         </div>
     </div>
@@ -18,7 +16,11 @@
    @include('inc/messages')
 
     <div class="w-2/3 mx-auto">
-        <div class="bg-white shadow-md rounded my-6">
+        <div class="bg-white card rounded my-6 p-3">
+            <h3 class="">
+                Create New Post
+            </h3>
+            <hr>
                 <form action="{{route('post.store')}}" method="POST" enctype="multipart/form-data">
                     @csrf  
                     <div class="row">

@@ -6,11 +6,11 @@ $posts comes from postsController
 @extends('layouts/app')
 @section('content')
 @include('inc/messages')
-<h2>posts</h2>
+<h1 class="text-light"><strong>All News</strong></h1>
+<hr>
 @auth
         <a href="/post/create">
-            <button type="submit" class="btn btn-secondary mb-2">
-           
+            <button type="submit" class="btn bg-green border-dark mb-3">
             <div class="d-flex">
                 <div>
                     <i class="fa fa-plus-circle"></i>
@@ -26,8 +26,8 @@ $posts comes from postsController
 @if (count($posts)>0)
     @foreach ($posts as $post)
        <div class="card p-2">
-            <a href="/post/{{$post->id}}"><h3>{{$post->title}}</h3></a>
-            <small>written on: {{$post->created_at}} by: {{$post->user->name}}</small><hr>
+            <a href="/post/{{$post->id}}" class="text-green"><h3>{{$post->title}}</h3></a>
+            <small class="text-dark">written on: {{$post->created_at}} by: {{$post->user->name}}</small><hr>
             <div class="d-flex flex-row">
                 @auth
                 @if ($post->user_id == auth()->user()->id)
