@@ -12,6 +12,8 @@ class EligibilitiesController extends Controller
     {
         $this->middleware('auth');
     }
+
+    
     public function index()
     {
     //with pagination, this is how u do it =) im a fcking GOD
@@ -19,6 +21,10 @@ class EligibilitiesController extends Controller
     $user = User::find($a->id)->Eligibility()->paginate(10);
     return view('eligibility.index')->with('eligibility', $user);
     }
+
+
+
+
     // points to create view
     public function create()
     {

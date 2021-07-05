@@ -41,6 +41,8 @@
                                 <td>{{$p->birthDate}}</td>
 
                                 {{-- Start of two buttons --}}
+
+                           
                                 <td><a href="/children/{{$p->id}}/edit">
                                     <button class="btn btn-secondary">
                                             <div class="d-flex">
@@ -70,6 +72,7 @@
                                         </button>
                                     </form>    
                                 </td>
+                         
                                 {{-- end of two buttons --}}
                             </tr>   
                             @endforeach

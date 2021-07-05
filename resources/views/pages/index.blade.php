@@ -2,18 +2,20 @@
 
 
 @section('content')
-<h1 class="text-light">Employee Management System</h1>
-  <div class="d-flex">
+@auth
+<h1 class="text-green">Employee Management System</h1>
+<div class="d-flex">
     <div>
       <i class="fa fa-tachometer-alt mr-1"></i>
     </div>
     <div>
       <p>Personal Dashboard</p> 
     </div>
-  </div>
-  @auth
-      
+ </div>
   
+@if (auth()->user()->is_admin)
+<h1>You are Admin</h1>
+@endif
 <div class="d-flex flex-wrap justify-content-center">
 
   <div class="card text-dark m-1 col-md-5">
@@ -63,8 +65,9 @@
     </div>
   </div>
 
-   
 </div> 
+
+
 @endauth
 
 @guest

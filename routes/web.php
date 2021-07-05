@@ -19,15 +19,8 @@ use Illuminate\Support\Facades\Auth;
 
 //pages route---------------------------------------------------------------------------------------------------
 Route::get('/', [                               PagesController::class, 'index'                                 ]);
-Route::get('/children', [                       PagesController::class, 'children'                              ]);
-Route::get('/education', [                      PagesController::class, 'education'                             ]);
-Route::get('/elligibility', [                   PagesController::class, 'elligibility'                          ]);
-Route::get('/learning_and_development', [       PagesController::class, 'learning_and_development'              ]);
-Route::get('/personal_information', [           PagesController::class, 'personal_information'                  ]);
-Route::get('/profile', [                        PagesController::class, 'profile'                               ]);
-Route::get('/refference', [                     PagesController::class, 'refference'                            ]);
-Route::get('/voluntary_work', [                 PagesController::class, 'voluntary_work'                        ]);
-Route::get('/work_experience', [                PagesController::class, 'work_experience'                       ]);
+Route::get('/admin', [                          PagesController::class, 'admin'                                 ]);
+Route::get('/about', [                          PagesController::class, 'about'                                 ]);
 //End of Pages Route--------------------------------------------------------------------------------------------
 
 
@@ -45,6 +38,7 @@ Route::resource('learninganddevelopment', '\App\Http\Controllers\Learninganddeve
 Route::resource('family', '\App\Http\Controllers\FamiliesController');
 Route::resource('children', '\App\Http\Controllers\ChildrensController');
 Route::resource('voluntarywork', '\App\Http\Controllers\VoluntaryworksController');
+Route::resource('admin', '\App\Http\Controllers\AdminController');
 
 Auth::routes();
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
