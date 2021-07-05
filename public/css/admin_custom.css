@@ -1,0 +1,30 @@
+.bg-header {
+    background: rgb(255,255,255);
+    background: linear-gradient(
+    90deg, 
+    rgba(255,255,255,1) 53%, 
+    rgba(193,236,212,1) 69%, 
+    rgba(158,225,188,1) 82%,
+    rgba(144,221,178,1) 87%, 
+    rgba(103,208,149,1) 94%, 
+    rgba(36,188,103,1) 100%);
+}
+
+.bg-sidenav {
+background: rgb(255,255,255);
+background-image: url('../img/ui/Both.png');
+background-repeat: no-repeat;
+background-position: bottom; 
+background-size: contain;
+background-position: right 0px bottom -30px;
+}
+
+.test-sidenav {
+    background: transparent;
+    margin-bottom: 300px;
+    }
+
+.nav-link.active{
+    background-color: rgba(36,188,103,1) !important; 
+  }
+  
