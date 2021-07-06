@@ -5,6 +5,8 @@ $posts comes from postsController
 
 @extends('layouts/app')
 @section('content')
+@if (auth()->user()->is_admin)
+
 @include('inc/messages')
 <h1 class="text-light"><strong>All News</strong></h1>
 <hr>
@@ -79,5 +81,5 @@ $posts comes from postsController
 @endif
 
 
-    
+@endif
 @endsection

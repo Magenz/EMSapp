@@ -27,11 +27,19 @@
          --}}
 
 @extends('adminlte::page')
-
 @section('title', 'Dashboard')
 
+
 @section('content_header')
-    <h1>Dashboard</h1>
+@auth
+@if (auth()->user()->is_admin)
+<button class="btn bg-primary"><a href="/admin">Admin Page</a></button>
+@endif
+@endauth
+
+
+
+   <br>
 @stop
 
 @section('content')

@@ -42,3 +42,6 @@ Route::resource('admin', '\App\Http\Controllers\AdminController');
 
 Auth::routes();
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+
+Route::get('change-password', '\App\Http\Controllers\ChangePasswordController@index');
+Route::post('change-password', '\App\Http\Controllers\ChangePasswordController@store')->name('change.password');

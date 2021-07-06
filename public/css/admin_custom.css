@@ -16,12 +16,12 @@ background-image: url('../img/ui/Both.png');
 background-repeat: no-repeat;
 background-position: bottom; 
 background-size: contain;
-background-position: right 0px bottom -30px;
+background-position: right 0px bottom -100px;
 }
 
 .test-sidenav {
     background: transparent;
-    margin-bottom: 300px;
+    
     }
 
 .nav-link.active{

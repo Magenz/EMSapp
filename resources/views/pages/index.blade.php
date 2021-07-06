@@ -14,64 +14,102 @@
  </div>
   
 @if (auth()->user()->is_admin)
-<h1>You are Admin</h1>
+<small>You are logged in as Admin</small>
+@else
+<small>You are logged in as User</small>
 @endif
-<div class="d-flex flex-wrap justify-content-center">
+<hr>
+<div class=""> <h1>Latest News</h1></div>
 
-  <div class="card text-dark m-1 col-md-5">
-    <div class="card-body">
-      <h5 class="card-title">My Personal Information</h5>
-      <p class="card-text">Contains most of your personal details.</p>
-     
-      <div class="d-flex flex-column">
-        <a href="geninfo" class="btn bg-purple mt-1">General Information</a>
-        <a href="address" class="btn bg-purple mt-1">Address</a>
-        <a href="eligibility" class="btn bg-purple mt-1">Eligibility</a>
-      </div>
+@if (count($posts)>0)
+    @foreach ($posts as $post)
+       <div class="card p-2">
+            <a href="/post/{{$post->id}}" class="text-green"><h3>{{$post->title}}</h3></a>
+            <small class="text-dark">written on: {{$post->created_at}} by: {{$post->user->name}}</small><hr>
+            <div class="d-flex flex-row">
+                @auth
+                @if ($post->user_id == auth()->user()->id)
+                    
+                <div class="p-2">
+                    {{-- edit --}}
+                    <a href="/post/{{$post->id}}/edit">
+                        <button class ="btn btn-primary">
+                            <div class="d-flex">
+                                <div>
+                                    <i class="fa fa-edit"></i>
+                                </div>
+                                <div class="ml-2">
+                                    Edit
+                                </div>
+                                </div>  
+                        </button>
+                    </a>
+                </div>
+                <div class="p-2">
+                    {{-- delete --}}
+                    <form action="{{ route('post.destroy', $post->id) }}" method="POST">
+                        @csrf
+                        @method('DELETE')
+                        <button type="submit" title="delete" class="btn btn-danger pull-right">
+                            <div class="d-flex">
+                                <div>
+                                    <i class="fa fa-trash"></i>
+                                </div>
+                                <div class="ml-2">
+                                    Del
+                                </div>
+                                </div>  
+                        </button>
+                    </form>    
+                </div>
+
+                @endif
+                @endauth
     
-    </div>
-  </div>
+              </div>
+            
+       
+        </div> 
+    @endforeach
+    {{$posts->links()}}
+@else
+    <p>No post Found</p>
+@endif
 
-  <div class="card text-dark m-1 col-md-5">
-    <div class="card-body">
-      <h5 class="card-title">My Educational Background</h5>
-      <p class="card-text">Contains your school details,<br> seminars, and other learning activities.</p>
-      <div class="d-flex flex-column">
-      <a href="/education" class="btn bg-purple mt-1">Education</a>
-      <a href="/learninganddevelopment" class="btn bg-purple mt-1">Learning and Development</a>
-      </div>
-    </div>
-  </div>
-
-  <div class="card text-dark m-1 col-md-5">
-    <div class="card-body">
-      <h5 class="card-title">Family Background</h5>
-      <p class="card-text">Contains my family background information.</p>
-      <div class="d-flex flex-column">
-      <a href="/family" class="btn bg-purple mt-1">Spouse and Parents</a>
-      <a href="/children" class="btn bg-purple mt-1">My Children</a>
-      </div>
-    </div>
-  </div>
-
-  <div class="card text-dark m-1 col-md-5">
-    <div class="card-body">
-      <h5 class="card-title">Experience</h5>
-      <p class="card-text">Contains my work related experiences.</p>
-      <div class="d-flex flex-column">
-      <a href="workexp" class="btn bg-purple mt-1">Work Experiences</a>
-      <a href="voluntarywork" class="btn bg-purple mt-1">Voluntary Works</a>
-      </div>
-    </div>
-  </div>
-
-</div> 
 
 
 @endauth
 
 @guest
-    <h1>Only Registered User Can Access The Dashboard</h1>
+<div class=" d-flex flex-column card p-3 col-md-6">
+  <div>
+    <h1 class="text-green">Employee Management System</h1>
+  </div>
+  
+  <div class="text-info">
+    <h3 >National Irrigation Administration</h3>
+  </div>
+  <div class="text-info">
+    <h5>Chico River Pump Irrigation Project</h5>
+  </div>
+
+  <hr>
+
+
+  <div>
+    <h6>You should <a href="/login">Login</a> to gain access</h6>
+  </div>
+  <div>
+    <h6>Or <a href="/register">Register</a> if you don't have account</h6>
+  </div>
+  
+ 
+</div>
+
+   
 @endguest
+
+
+
 @endsection
 

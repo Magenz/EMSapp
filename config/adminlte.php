@@ -230,14 +230,25 @@ return [
             'type'         => 'fullscreen-widget',
             'topnav_right' => true,
         ],
-
+        [
+            'header'=> 'adsad',
+            'topnav' => true,
+        ],
+        
         // Sidebar items:
         [
             'text' => 'blog',
             'url'  => 'admin/blog',
             'can'  => 'manage-blog',
         ],
-        ['header' => 'MY PROFILE'],
+        
+        //submenu
+        ['header' => 'MY PROFILE',      
+          'submenu' => []      
+        ],
+        //end
+
+
         [
             'text' => 'Personal Information',
             'active' => ['geninfo', 'geninfo*', 'regex:@^geninfo/[0-9]+$@'],
@@ -259,7 +270,7 @@ return [
         ],
         [
             'text' => 'change_password',
-            'url'  => '/settings',
+            'url'  => '/change-password',
             'icon' => 'fas fa-fw fa-lock',
             'icon_color' => 'green',
         ],

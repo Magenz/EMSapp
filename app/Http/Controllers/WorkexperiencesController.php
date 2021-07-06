@@ -19,11 +19,13 @@ class WorkexperiencesController extends Controller
     $user = User::find($a->id)->Workexperience()->paginate(10);
     return view('workexp.index')->with('workexperience', $user);
     }
+    
     // points to create view
     public function create()
     {
         return view('workexp/create');
     }
+    
     // storing function
     public function store(Request $request)
     {
