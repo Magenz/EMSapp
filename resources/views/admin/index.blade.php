@@ -3,7 +3,7 @@
 @extends('layouts/app')
 
 @section('content')
-<div class=" d-flex border bg-green p-3 col-md-6">
+<div class=" d-flex border bg-green p-3 ">
       <form action="">
         <div class="input-group">
         <input type="text" id="fname" name="filter[surname]" value="" class="form-control" placeholder="Search Surname"><br>
@@ -13,25 +13,8 @@
     
 </div>
 
-<div class="d-flex border bg-green p-2 col-md-10 col-lg-6">
-    <div class=" p-1">
-        <b><p>Sort Employees By:</p></b>
-    </div>
-     <div class=" p-1">
-        <button class="bg-light btn elevation-2 btn-sm">Birthday</button>
-    </div>
-    <div class=" p-1">
-        <button class="bg-light btn elevation-2 btn-sm" >Surname</button>
-    </div>
-    <div class=" p-1">
-        <button class="bg-light btn elevation-2 btn-sm">First Name</button>
-    </div>
-</div>
-
-<div class="d-flex border bg-green p-2 col-md-6">
-    <div class=" p-1">
-        <b><p>Order by:</p></b>
-    </div>
+<div class="d-flex border bg-green p-2 align-items-center">
+    <div class="mr-2"><b>Order By:</b></div>
     <div class=" p-1">
         <a href="/admin/order=asc">
         <button class="bg-primary btn elevation-2 btn-sm">Ascending</button>
@@ -42,6 +25,7 @@
         <button class="bg-secondary btn elevation-2 btn-sm">Descending</button>
         </a>
     </div>
+    <div class="ml-5"><b>Total:</b> {{count($list)}}</div>
 </div>
 
 

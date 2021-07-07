@@ -84,7 +84,6 @@ class AdminController extends Controller
         //if i get rid of paginate, it breaks T.T
         //The only fix is to restructure the querry
 
-
         $eligibility = User::find($id)->Eligibility()->paginate(666);
         $voluntarywork = User::find($id)->Voluntarywork()->paginate(666);
         $workexperience = User::find($id)->Workexperience()->paginate(666);
