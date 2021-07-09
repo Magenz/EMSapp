@@ -16,7 +16,7 @@
                             <th>Birth Date</th>
                         </tr>
                         </thead>
-                       <h3>Your children</h3>
+                   
                             @foreach ($children as $p)
                             <tr class="text-dark">
                                 <td>{{$p->childName}}</td>

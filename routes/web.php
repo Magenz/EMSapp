@@ -23,6 +23,9 @@ Route::resource('learninganddevelopment', '\App\Http\Controllers\Learninganddeve
 Route::resource('family', '\App\Http\Controllers\FamiliesController');
 Route::resource('children', '\App\Http\Controllers\ChildrensController');
 Route::resource('voluntarywork', '\App\Http\Controllers\VoluntaryworksController');
+
+Route::resource('news', '\App\Http\Controllers\NewsController');
+Route::resource('bids', '\App\Http\Controllers\BidsController');
 // Route::resource('admin', '\App\Http\Controllers\AdminController');
 
 Auth::routes([
@@ -37,3 +40,5 @@ Route::post('change-password', '\App\Http\Controllers\ChangePasswordController@s
 Route::get('/admin/order={orderby}', [AdminController::class, 'order']);
 Route::get('/admin', [AdminController::class, 'index']);
 Route::get('/admin/{id}', [AdminController::class, 'show']);
+
+

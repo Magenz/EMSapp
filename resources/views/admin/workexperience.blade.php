@@ -24,7 +24,7 @@
                         </tr>
                         </thead>
                        @if (count($workexperience)>0)
-                       <h3>Your workexperience</h3>
+                      
                             @foreach ($workexperience as $p)
                             <tr class="text-dark">
                                 <td>{{$p->dateFrom}}</td>

@@ -12,7 +12,7 @@
         <div class="col-lg-12 margin-tb">
             
             <div class="">
-                <a class="btn btn-primary" href="{{ route('address.index') }}" title="Go back"> <i class="fas fa-backward "><< Back</i> </a>
+                <a class="btn btn-success" href="{{ route('address.index') }}" title="Go back"> <i class="fas fa-backward "> Back</i> </a>
             </div>
     </div>
 </div>
@@ -27,7 +27,7 @@
                     @csrf  
                     <div class="row">
                        {{-- textfields --}}
-                       <h3 class="mt-3">Current Address</h3>
+                       <h4 class="mt-3">Current Address</h4>
                         <div class="col-xs-12 col-sm-12 col-md-12 px-7 pt-2">
                             <div class="form-group">
                                 <strong>House Block</strong>
@@ -70,7 +70,7 @@
                                 <input type="text" name="res_zipcode" class="form-control">
                             </div>
                         </div>
-                        <h3>Permanent Address</h3>
+                        <h4>Permanent Address</h4>
                         <div class="col-xs-12 col-sm-12 col-md-12 px-7 pt-2">
                             <div class="form-group">
                                 <strong>House Block</strong>

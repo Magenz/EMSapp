@@ -21,7 +21,7 @@
                         </tr>
                         </thead>
                        @if (count($lad)>0)
-                       <h3>Your Learning And Development</h3>
+                      
                             @foreach ($lad as $p)
                             <tr class="text-dark">
                                 <td>{{$p->title}}</td>

@@ -37,29 +37,16 @@
 </div>
 
 {{-- family --}}
-<div class="d-flex flex-row">
+<div class="d-flex flex-row ">
     
     <button class="btn text-left col-xl-12 bg-light" type="button" data-toggle="collapse" data-target="#family">
       <h5><i class="fas fa-plus-circle mr-2"></i> Family </h5>  
     </button></div>
     <div class="collapse" id="family">
-        <div class="card card-body">
+        <div class="card card-body d-flex flex-row flex-wrap justify-content-center">
             @include('admin.family')
-        </div>
-    </div>
-
-<div class="border-top my-1">
-</div>
-
-{{-- children --}}
-<div class="d-flex flex-row">
-    
-    <button class="btn text-left col-xl-12 bg-light" type="button" data-toggle="collapse" data-target="#children">
-      <h5><i class="fas fa-plus-circle mr-2"></i> Children </h5>  
-    </button></div>
-    <div class="collapse" id="children">
-        <div class="card card-body">
             @include('admin.children')
+            
         </div>
     </div>
 

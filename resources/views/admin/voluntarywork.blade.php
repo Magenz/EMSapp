@@ -22,7 +22,7 @@
                         </tr>
                         </thead>
                        @if (count($voluntarywork)>0)
-                       <h3>Your voluntarywork</h3>
+                      
                             @foreach ($voluntarywork as $p)
                             <tr class="text-dark">
                                 <td>{{$p->workPosition}}</td>

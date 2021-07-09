@@ -33,7 +33,7 @@
 @section('content_header')
 @auth
 @if (auth()->user()->is_admin)
-<button class="btn bg-primary"><a href="/admin">Admin Page</a></button>
+<button class="btn bg-green elevation-2"><a href="/admin">Admin Page</a></button>
 @endif
 @endauth
 

@@ -34,6 +34,7 @@
 @if (auth()->user()->is_admin)
      <hr>  
  @foreach ($list as $p)
+ 
  <div class="card p-2">
     <div class="d-flex flex-row">
         <h5 class="mr-1">{{$p->surname}},</h5><h5 class="mr-1">{{$p->first_name}},</h5><h5>{{$p->middle_name}}</h5>
