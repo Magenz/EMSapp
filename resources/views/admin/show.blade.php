@@ -13,21 +13,17 @@ education      $education)
 lad            $lad);
 --}}
 @section('content')
-    <h3>Details</h3>
+    <h3>Details of {{$pinfo->surname}}, {{$pinfo->first_name}} {{$pinfo->middle_name}}</h3>
 <div class="border-top my-1"></div>
 @auth
 @if (auth()->user()->is_admin)
-
-
-       
-        
-     
+ 
       
 {{-- pinfo --}}
 <div class="d-flex flex-row">
     
-    <button class="btn col-xl-12 bg-light" type="button" data-toggle="collapse" data-target="#pinfo">
-      <h4> Personal Info </h4>  
+    <button class="btn text-left col-xl-12 bg-light" type="button" data-toggle="collapse" data-target="#pinfo">
+      <h5> Personal Info </h5>  
     </button></div>
     <div class="collapse" id="pinfo">
         <div class="card card-body">
@@ -43,8 +39,8 @@ lad            $lad);
 {{-- family --}}
 <div class="d-flex flex-row">
     
-    <button class="btn col-xl-12 bg-light" type="button" data-toggle="collapse" data-target="#family">
-      <h4> Family </h4>  
+    <button class="btn text-left col-xl-12 bg-light" type="button" data-toggle="collapse" data-target="#family">
+      <h5> Family </h5>  
     </button></div>
     <div class="collapse" id="family">
         <div class="card card-body">
@@ -58,8 +54,8 @@ lad            $lad);
 {{-- children --}}
 <div class="d-flex flex-row">
     
-    <button class="btn col-xl-12 bg-light" type="button" data-toggle="collapse" data-target="#children">
-      <h4> Children </h4>  
+    <button class="btn text-left col-xl-12 bg-light" type="button" data-toggle="collapse" data-target="#children">
+      <h5> Children </h5>  
     </button></div>
     <div class="collapse" id="children">
         <div class="card card-body">
@@ -71,28 +67,86 @@ lad            $lad);
 </div>
 
 {{-- education --}}
-<h2>Education</h2>
-@include('admin.education')
-<div class="border-top my-1"></div>
+<div class="d-flex flex-row">
+    
+    <button class="btn text-left col-xl-12 bg-light" type="button" data-toggle="collapse" data-target="#education">
+      <h5> Education </h5>  
+    </button></div>
+    <div class="collapse" id="education">
+        <div class="card card-body">
+            @include('admin.education')
+        </div>
+    </div>
+
+<div class="border-top my-1">
+</div>
 
 {{-- eligibility --}}
-<h2>Eligibility</h2>
-@include('admin.eligibility')
-<div class="border-top my-1"></div>
+
+<div class="d-flex flex-row">
+    
+    <button class="btn text-left col-xl-12 bg-light" type="button" data-toggle="collapse" data-target="#eligibility">
+      <h5> Eligibility </h5>  
+    </button></div>
+    <div class="collapse" id="eligibility">
+        <div class="card card-body">
+            @include('admin.eligibility')
+        </div>
+    </div>
+
+<div class="border-top my-1">
+</div>
 
 {{-- voluntarywork --}}
-<h2>Voluntary Vork</h2>
-@include('admin.voluntarywork')
-<div class="border-top my-1"></div>
+
+
+<div class="d-flex flex-row">
+    
+    <button class="btn text-left col-xl-12 bg-light" type="button" data-toggle="collapse" data-target="#voluntarywork">
+      <h5> Voluntary Work </h5>  
+    </button></div>
+    <div class="collapse" id="voluntarywork">
+        <div class="card card-body">
+            @include('admin.voluntarywork')
+        </div>
+    </div>
+
+<div class="border-top my-1">
+</div>
+
+
 
 {{-- workexperience --}}
-<h2>Work Experiences</h2>
-@include('admin.workexperience')
-<div class="border-top my-1"></div>
+
+
+<div class="d-flex flex-row">
+    
+    <button class="btn text-left col-xl-12 bg-light" type="button" data-toggle="collapse" data-target="#workexperience">
+      <h5> Work Experience </h5>  
+    </button></div>
+    <div class="collapse" id="workexperience">
+        <div class="card card-body">
+            @include('admin.workexperience')
+        </div>
+    </div>
+
+<div class="border-top my-1">
+</div>
+
 {{-- lad --}}
-<h2>Seminars and Trainings</h2>
-@include('admin.lad')
-<div class="border-top my-1"></div>
+<div class="d-flex flex-row">
+    
+    <button class="btn text-left col-xl-12 bg-light" type="button" data-toggle="collapse" data-target="#lad">
+      <h5>Seminars And Trainings </h5>  
+    </button></div>
+    <div class="collapse" id="lad">
+        <div class="card card-body">
+            @include('admin.lad')
+        </div>
+    </div>
+
+<div class="border-top my-1">
+</div>
 
 @endif
 @endauth
