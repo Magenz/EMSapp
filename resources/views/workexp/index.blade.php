@@ -11,7 +11,16 @@
                 <div class="card-body">
                     {{-- create workexp--}}
                     <a href="/workexp/create">
-                        <button class="btn btn-primary mb-2"> Add Work Experience</button>
+                        <button class="btn btn-success mb-2"> 
+                            <div class="d-flex">
+                                <div>
+                                    <i class="fas fa-plus-circle mr-2"></i>
+                                </div>
+                                <div>
+                                    Add Work Experience
+                                </div>
+                            </div>
+                            </button>
                     </a> 
                     <div class="table-responsive">
 

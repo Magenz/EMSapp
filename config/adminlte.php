@@ -308,7 +308,7 @@ return [
             'url'        => '/workexp',
         ],
         [
-            'text'       => 'Voluntary Experience',
+            'text'       => 'Voluntary Work',
             'icon_color' => 'green',
             'icon' => 'fas fa-fw fa-handshake',
             'url'        => '/voluntarywork',

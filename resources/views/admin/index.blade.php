@@ -32,8 +32,7 @@
 
 @auth
 @if (auth()->user()->is_admin)
-     <hr>
-     
+     <hr>  
  @foreach ($list as $p)
  <div class="card p-2">
     <div class="d-flex flex-row">
