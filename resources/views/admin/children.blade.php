@@ -25,7 +25,7 @@
                             @endforeach
                             {{$children->links()}}
                           @else
-                            <h5 class='text-dark'>You have no Children</h5>
+                            <h5 class='text-dark'>No record found</h5>
                         @endif  
                     </table>
                 </div>

@@ -1,3 +1,5 @@
+@if ($pinfo)
+    
 
 {{-- // --}}
 <div class="card col-md-5 bg-light m-1 p-3">
@@ -149,3 +151,6 @@
 </div>
 
 
+@else
+    <h4>No Record Found</h4>
+@endif
