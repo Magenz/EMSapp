@@ -18,20 +18,57 @@ lad            $lad);
 @auth
 @if (auth()->user()->is_admin)
 
+
+       
+        
+     
+      
 {{-- pinfo --}}
-<h2>Personal Info</h2>
-@include('admin.pinfo')
-<div class="border-top my-1"></div>
+<div class="d-flex flex-row">
+    
+    <button class="btn col-xl-12 bg-light" type="button" data-toggle="collapse" data-target="#pinfo">
+      <h4> Personal Info </h4>  
+    </button></div>
+    <div class="collapse" id="pinfo">
+        <div class="card card-body">
+            <div class="d-flex flex-row flex-wrap">
+                @include('admin.pinfo')
+            </div>
+        </div>
+    </div>
+
+<div class="border-top my-1">
+</div>
 
 {{-- family --}}
-<h2>Family</h2>
-@include('admin.family')
-<div class="border-top my-1"></div>
+<div class="d-flex flex-row">
+    
+    <button class="btn col-xl-12 bg-light" type="button" data-toggle="collapse" data-target="#family">
+      <h4> Family </h4>  
+    </button></div>
+    <div class="collapse" id="family">
+        <div class="card card-body">
+            @include('admin.family')
+        </div>
+    </div>
+
+<div class="border-top my-1">
+</div>
 
 {{-- children --}}
-<h2>Children</h2>
-@include('admin.children')
-<div class="border-top my-1"></div>
+<div class="d-flex flex-row">
+    
+    <button class="btn col-xl-12 bg-light" type="button" data-toggle="collapse" data-target="#children">
+      <h4> Children </h4>  
+    </button></div>
+    <div class="collapse" id="children">
+        <div class="card card-body">
+            @include('admin.children')
+        </div>
+    </div>
+
+<div class="border-top my-1">
+</div>
 
 {{-- education --}}
 <h2>Education</h2>

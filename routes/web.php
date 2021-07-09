@@ -9,6 +9,7 @@ use Illuminate\Support\Facades\Auth;
 //pages route---------------------------------------------------------------------------------------------------
 Route::get('/',      [PagesController::class, 'index']);
 Route::get('/about', [PagesController::class, 'about']);
+Route::get('/dashboard', [PagesController::class, 'dashboard']);
 //End of Pages Route--------------------------------------------------------------------------------------------
 
 //routing resources
@@ -24,7 +25,9 @@ Route::resource('children', '\App\Http\Controllers\ChildrensController');
 Route::resource('voluntarywork', '\App\Http\Controllers\VoluntaryworksController');
 // Route::resource('admin', '\App\Http\Controllers\AdminController');
 
-Auth::routes();
+Auth::routes([
+    'register' => true
+]);
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 Route::get('change-password', '\App\Http\Controllers\ChangePasswordController@index');
 Route::post('change-password', '\App\Http\Controllers\ChangePasswordController@store')->name('change.password');
