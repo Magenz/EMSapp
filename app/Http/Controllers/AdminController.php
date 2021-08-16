@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Spatie\QueryBuilder\QueryBuilder;
+
 //list of models-------------------------
 
 // use App\Models\Address;
@@ -66,10 +67,13 @@ class AdminController extends Controller
     public function index()
     {
     //with pagination, this is how u do it =) im a fcking GOD
+    
     $a = Personalinfo::orderBy('surname', 'asc');
-    $b = QueryBuilder::for($a)
+ 
+        $b = QueryBuilder::for($a)
         ->allowedFilters('surname');
-    $res = $b->paginate(10);
+       $res = $b->paginate(10);
+       
     //   return $res;
     return view('admin.index')->with('list', $res);
     }
@@ -79,6 +83,8 @@ class AdminController extends Controller
      
         $address = User::find($id)->Address()->first();
         $personalinfo = User::find($id)->Personalinfo()->first();
+        
+        
         $family = User::find($id)->Family()->first();
 
         //if i get rid of paginate, it breaks T.T
@@ -90,7 +96,7 @@ class AdminController extends Controller
         $children = User::find($id)->Children()->paginate(666);
         $education = User::find($id)->Education()->paginate(666);
         $lad = User::find($id)->Learninganddevelopment()->paginate(666);
-
+    
 
         
         return view('admin.show')
@@ -103,5 +109,6 @@ class AdminController extends Controller
         ->with('children', $children)
         ->with('education', $education)
         ->with('lad', $lad);
+        
     }
 }
